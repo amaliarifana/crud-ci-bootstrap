@@ -67,4 +67,21 @@ class Mahasiswa extends CI_Controller
         redirect('mahasiswa');
     }
 
+    function delete(){
+        if ($data['mahasiswas'] = $this->mahasiswa_m->get_all()) {
+            $data['mahasiswas'] = $this->mahasiswa_m->get_all();
+
+        } else {
+            $data['mahasiswas'] = array();
+
+        }
+        $id = $this->uri->segment(3);
+        $this->mahasiswa_m->delete($id);
+        $data['mahasiswas'] = $this->mahasiswa_m->get_all();
+        $this->load->view('header');
+        $this->load->view('mahasiswa_input', $data);
+        $this->load->view('mahasiswa_table');
+        $this->load->view('footer');
+    }
+
 }

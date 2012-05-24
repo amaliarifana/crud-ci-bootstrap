@@ -10,7 +10,7 @@
         <td><?php echo $mhs->nim ?></td>
         <td><?php echo $mhs->nama ?></td>
         <td><?php echo $mhs->alamat ?></td>
-        <td><a href="<?php echo site_url()?>/mahasiswa/ubah/<?php echo $mhs->nim;?>">Ubah</a> || <a href="<?php echo $mhs->nim ?>">Hapus</a> </td>
+        <td><a href="<?php echo site_url()?>/mahasiswa/ubah/<?php echo $mhs->nim;?>">Ubah</a> || <a href="<?php echo site_url()?>/mahasiswa/delete/<?php echo $mhs->nim ?>" onclick="return confirm('Apakah sudah benar benar yakin untuk menghapus data ??? :D')">Hapus</a> </td>
 
     </tr>
     <?php endforeach; ?>
